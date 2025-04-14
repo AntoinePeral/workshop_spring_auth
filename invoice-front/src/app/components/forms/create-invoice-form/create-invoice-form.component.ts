@@ -1,3 +1,4 @@
+import { Description } from './../../../../../node_modules/jackspeak/dist/commonjs/index.d';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ApiService } from '../../../shared/services/api.service';
@@ -14,7 +15,7 @@ export class CreateInvoiceFormComponent {
   private router = inject(Router);
 
   invoice = {
-    label: '',
+    description: '',
     amount: 0,
     date: '',
   };

@@ -17,7 +17,11 @@ export class NavbarComponent {
   }
 
   isAdmin(): boolean {
-    return this.authService.getUserRole() === 'ADMIN';
+    const role = this.authService.getUserRoles();
+    if(role?.some((role: any)=> role.authority === "ROLE_ADMIN")){
+      return true;
+    }
+    return false
   }
 
   logout(): void {
