@@ -1,0 +1,54 @@
+.home-instructions {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+.home-instructions h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.home-instructions h3 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #111;
+}
+
+.home-instructions p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.home-instructions ol {
+  padding-left: 1.5rem;
+}
+
+.home-instructions ol li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.home-instructions code {
+  background-color: #eee;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+.home-instructions ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.home-instructions ul li {
+  margin-bottom: 0.5rem;
+}

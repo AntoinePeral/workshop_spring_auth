@@ -1,0 +1,52 @@
+<h2>Tableau de bord administrateur</h2>
+
+<div class="admin-dashboard">
+  <!-- Liste des utilisateurs -->
+  <section class="admin-section">
+    <h3>Utilisateurs</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Rôles</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (user of users; track user.id) {
+          <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.roles.join(', ') }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Liste des factures -->
+  <section class="admin-section">
+    <h3>Toutes les factures</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Montant</th>
+          <th>Client</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (invoice of invoices; track invoice.id) {
+          <tr>
+            <td>{{ invoice.id }}</td>
+            <td>{{ invoice.amount }} €</td>
+            <td>{{ invoice.user?.email }}</td>
+            <td>{{ invoice.date | date: 'dd/MM/yyyy' }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+</div>
+

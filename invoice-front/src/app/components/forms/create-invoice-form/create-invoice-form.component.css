@@ -1,0 +1,56 @@
+form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+form div {
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+form input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+}
+
+form span {
+  display: block;
+  font-size: 0.875rem;
+  color: #ff0000;
+  margin-top: 0.25rem;
+}
+
+form button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #333333;
+  color: #ffffff;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #000000;
+}
+
+form button:disabled {
+  background-color: #888888;
+  cursor: not-allowed;
+}

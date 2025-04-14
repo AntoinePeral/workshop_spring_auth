@@ -1,0 +1,29 @@
+<div class="invoices-header">
+  <h2>Mes factures</h2>
+  <a routerLink="/invoices/create" class="create-button">Créer une facture</a>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Libellé</th>
+      <th>Montant</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    @if (invoices.length > 0) {
+      @for (invoice of invoices; track invoice.id) {
+        <tr>
+          <td>{{ invoice.description }}</td>
+          <td>{{ invoice.amount }} €</td>
+          <td>{{ invoice.date }}</td>
+        </tr>
+      }
+    } @else {
+      <tr>
+        <td colspan="3">Aucune facture pour le moment.</td>
+      </tr>
+    }
+  </tbody>
+</table>
