@@ -89,7 +89,7 @@
   <h3>🖼️ Exemple d'écran de connexion à la console H2</h3>
   <p>
     <img
-      src="assets/interface-h2.png"
+      src="./invoice-front/public/assets/interface-h2.png"
       alt="Écran de connexion H2"
       style="max-width: 100%"
     />
