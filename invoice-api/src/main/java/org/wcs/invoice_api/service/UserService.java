@@ -2,9 +2,11 @@ package org.wcs.invoice_api.service;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.wcs.invoice_api.entity.Invoice;
 import org.wcs.invoice_api.entity.User;
 import org.wcs.invoice_api.repository.UserRepository;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -29,5 +31,9 @@ public class UserService {
         user.setPassword(passwordEncoder.encode(password));
         user.setRoles(roles);
         return userRepository.save(user);
+    }
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 }

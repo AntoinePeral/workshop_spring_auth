@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.wcs.invoice_api.entity.Invoice;
 import org.wcs.invoice_api.entity.User;
 import org.wcs.invoice_api.service.InvoiceService;
+import org.wcs.invoice_api.service.UserService;
 
 import java.util.List;
 
@@ -15,14 +16,22 @@ import java.util.List;
 public class AdminController {
 
     private final InvoiceService invoiceService;
+    private final UserService userService;
 
-    public AdminController(InvoiceService invoiceService) {
+    public AdminController(InvoiceService invoiceService, UserService userService) {
         this.invoiceService = invoiceService;
+        this.userService = userService;
     }
 
     // GET /invoices : retourne les factures de tous les utilisateurs
-    @GetMapping
+    @GetMapping("/invoices")
     public List<Invoice> getAllInvoices() {
         return invoiceService.getAllInvoices();
+    }
+
+    // GET /invoices : retourne les factures de tous les utilisateurs
+    @GetMapping("/users")
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
     }
 }
